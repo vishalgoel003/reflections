@@ -10,13 +10,23 @@ What value do you think it offers?
 How can you use the staging area to make sure you have one commit per logical
 change?
 
+	Using git diff we get the difference between working directory and staged area. And using git diff --staged we get difference between staged and last commit. Thus we can efficiently track the changes in staging area and commit, when we think a logical block is completed.
+
 What are some situations when branches would be helpful in keeping your history
 organized? How would branches help?
 
+	When working on some experimental feature that may or may not be sucessful. Branches are labels to commit and you can simply gump by checking out different branches. You can get rid of detached head error too.
+
 How do the diagrams help you visualize the branch structure?
+
+	changes, parent commits etc. all are shown.
 
 What is the result of merging two branches together? Why do we represent it in
 the diagram the way we do?
 
+	The result of merging 2 branches is the current branch with all the changes in other specified branches, if merge is possible(i.e. one common parent is present). diagram shows the timeline and it is easy to resolve merge conflicts.
+
 What are the pros and cons of Gitâ€™s automatic merging vs. always doing merges
 manually?
+
+	It can not always work. In my view, even if it merges sucessfully, our code could break. Always merging is anyway rubish.
